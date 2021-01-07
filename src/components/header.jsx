@@ -9,7 +9,7 @@ const handleClick = useCallback(() => {
   toggleDarkMode(!isDarkMode);
 }, []);
 
-const Header = ({ isDarkMode, siteTitle, toggleDarkMode }) => (
+const Header = ({ siteTitle }) => (
   <header
     style={{
       background: 'rebeccapurple',

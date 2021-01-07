@@ -1,3 +1,1 @@
-import wrapWithProvider from './src/store/reduxWrapper';
-
-export const wrapRootElement = wrapWithProvider;
+export { default as wrapRootElement } from './src/store/reduxWrapper';
