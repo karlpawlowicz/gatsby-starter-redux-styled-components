@@ -51,7 +51,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
@@ -67,7 +67,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint ./src --fix"
+      "eslint"
     ],
     "*.{css,js,json,jsx,md,scss,ts,tsx}": [
       "prettier --write"
