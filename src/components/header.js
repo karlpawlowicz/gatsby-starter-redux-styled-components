@@ -1,9 +1,13 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 
 import { toggleDarkMode } from '../store/actions/header.actions';
+
+const handleClick = useCallback(() => {
+  toggleDarkMode(!isDarkMode);
+}, []);
 
 const Header = ({ isDarkMode, siteTitle, toggleDarkMode }) => (
   <header
@@ -19,7 +23,7 @@ const Header = ({ isDarkMode, siteTitle, toggleDarkMode }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <button onClick={() => toggleDarkMode(!isDarkMode)}>Dark mode</button>
+      <button onClick={handleClick}>Dark mode</button>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
