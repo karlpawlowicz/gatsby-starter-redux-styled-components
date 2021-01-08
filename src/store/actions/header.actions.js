@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import { HEADER } from './actions.type';
 
 export const toggleDarkMode = (isDarkMode) => ({
