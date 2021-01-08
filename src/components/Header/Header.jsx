@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { toggleDarkMode } from '../store/actions/header.actions';
+import { toggleDarkMode } from '../../store/actions/header.actions';
 
 const Header = ({ siteTitle }) => {
   const dispatch = useDispatch();
