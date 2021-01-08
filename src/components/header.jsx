@@ -46,12 +46,6 @@ const Header = ({ siteTitle }) => {
   );
 };
 
-// Header.propTypes = {
-//   isDarkMode: PropTypes.bool.isRequired,
-//   siteTitle: PropTypes.string,
-//   toggleDarkModeAction: PropTypes.func.isRequired,
-// };
-
 Header.propTypes = {
   siteTitle: PropTypes.string,
 };
@@ -59,15 +53,5 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: '',
 };
-
-// const mapStateToProps = (state) => ({
-//   isDarkMode: state.header.isDarkMode,
-// });
-
-// const mapDispatchToProps = {
-//   toggleDarkModeAction: toggleDarkMode,
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
 export default Header;
