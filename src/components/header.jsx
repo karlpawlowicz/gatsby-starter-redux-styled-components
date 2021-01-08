@@ -1,14 +1,17 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { toggleDarkMode } from '../store/actions/header.actions';
 
-const Header = ({ isDarkMode, siteTitle, toggleDarkModeAction }) => {
+const Header = ({ siteTitle }) => {
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector((state) => state.header.isDarkMode);
+
   const handleClick = useCallback(() => {
-    toggleDarkModeAction(!isDarkMode);
-  }, [isDarkMode, toggleDarkModeAction]);
+    dispatch(toggleDarkMode(!isDarkMode));
+  }, [dispatch, isDarkMode]);
 
   return (
     <header
@@ -43,22 +46,28 @@ const Header = ({ isDarkMode, siteTitle, toggleDarkModeAction }) => {
   );
 };
 
+// Header.propTypes = {
+//   isDarkMode: PropTypes.bool.isRequired,
+//   siteTitle: PropTypes.string,
+//   toggleDarkModeAction: PropTypes.func.isRequired,
+// };
+
 Header.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,
   siteTitle: PropTypes.string,
-  toggleDarkModeAction: PropTypes.func.isRequired,
 };
 
 Header.defaultProps = {
   siteTitle: '',
 };
 
-const mapStateToProps = (state) => ({
-  isDarkMode: state.header.isDarkMode,
-});
+// const mapStateToProps = (state) => ({
+//   isDarkMode: state.header.isDarkMode,
+// });
 
-const mapDispatchToProps = {
-  toggleDarkModeAction: toggleDarkMode,
-};
+// const mapDispatchToProps = {
+//   toggleDarkModeAction: toggleDarkMode,
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+// export default connect(mapStateToProps, mapDispatchToProps)(Header);
+
+export default Header;
