@@ -58,7 +58,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  toggleDarkMode,
+  toggleDarkModeAction: toggleDarkMode,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
