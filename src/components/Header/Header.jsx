@@ -1,10 +1,11 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { toggleDarkMode } from '../../store/actions/header.actions';
-import { HeaderWrapper } from './HeaderStyle';
+import { Container, Wrapper } from './HeaderStyle';
+import { HeadingOne } from '../../style/Headings';
+import { Link } from '../../style/Links';
 
 const Header = ({ siteTitle }) => {
   const dispatch = useDispatch();
@@ -15,35 +16,16 @@ const Header = ({ siteTitle }) => {
   }, [dispatch, isDarkMode]);
 
   return (
-    <HeaderWrapper
-      style={{
-        background: 'rebeccapurple',
-        marginBottom: '1.45rem',
-      }}
-    >
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '1.45rem 1.0875rem',
-        }}
-      >
+    <Wrapper>
+      <Container>
         <button onClick={handleClick} type="button">
           Dark mode
         </button>
-        <h1 style={{ margin: 0 }}>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
-      </div>
-    </HeaderWrapper>
+        <HeadingOne>
+          <Link to="/">{siteTitle}</Link>
+        </HeadingOne>
+      </Container>
+    </Wrapper>
   );
 };
 

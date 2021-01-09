@@ -2,7 +2,6 @@
 
 import styled from 'styled-components';
 
-export const ImageWrapper = styled.div`
-  margin-bottom: 1.45rem;
-  max-width: 300px;
+export const HeadingOne = styled.h1`
+  margin: 0;
 `;
