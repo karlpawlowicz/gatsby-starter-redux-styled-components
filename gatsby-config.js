@@ -38,5 +38,6 @@ module.exports = {
         test: /\.js$|\.jsx$/,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };
