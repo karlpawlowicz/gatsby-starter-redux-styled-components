@@ -4,6 +4,7 @@ import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { toggleDarkMode } from '../../store/actions/header.actions';
+import { HeaderWrapper } from './HeaderStyle';
 
 const Header = ({ siteTitle }) => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const Header = ({ siteTitle }) => {
   }, [dispatch, isDarkMode]);
 
   return (
-    <header
+    <HeaderWrapper
       style={{
         background: 'rebeccapurple',
         marginBottom: '1.45rem',
@@ -42,7 +43,7 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
       </div>
-    </header>
+    </HeaderWrapper>
   );
 };
 

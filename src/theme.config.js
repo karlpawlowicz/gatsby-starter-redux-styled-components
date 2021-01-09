@@ -1,7 +1,9 @@
-// Inspired by Tailwind CSS’s defaultConfig.stub.js
-
 const theme = {
-  colors: {},
+  colors: {
+    black: '#000',
+    yellow: '#ff0',
+    transparent: 'transparent',
+  },
   fontSize: {},
   screens: {},
   spacing: {},

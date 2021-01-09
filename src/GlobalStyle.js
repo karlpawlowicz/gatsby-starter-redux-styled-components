@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-// import theme from './theme.config.js';
+import theme from './theme.config';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
   a {
-    background-color: transparent;
+    background-color: ${theme.colors.transparent};
     -webkit-text-decoration-skip: objects;
   }
   a:active,
@@ -94,8 +94,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.1;
   }
   mark {
-    background-color: #ff0;
-    color: #000;
+    background-color: ${theme.colors.yellow};
+    color: ${theme.colors.black};
   }
   small {
     font-size: 80%;
