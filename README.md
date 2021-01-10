@@ -8,7 +8,7 @@
   Gatsby Redux Styled Components Starter
 </h1>
 
-A simple Gatsby starter with Redux, Redux Thunk middleware and styled-components that you can deploy to AWS or Netlify. This starter also includes some basic Prettier and VS Code configuration files and uses Airbnb’s ESLint config.
+A simple Gatsby starter with Redux, Redux Thunk middleware and styled-components that you can deploy to AWS or Netlify. This starter also includes some basic nvm, Prettier, and VS Code configuration files and uses Airbnb’s ESLint config.
 
 ## 🚀 Quick start
 
