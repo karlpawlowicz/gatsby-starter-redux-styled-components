@@ -1,12 +1,32 @@
 {
   "name": "gatsby-starter-redux-styled-components",
-  "private": true,
-  "description": "A simple Gatsby starter with Redux hooks/thunk and styled-components",
   "version": "0.0.1",
+  "description": "A simple Gatsby starter with Redux hooks/thunk and styled-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components.git"
+  },
   "author": "Karl Pawlowicz <karlpawlowicz@gmail.com>",
   "contributors": [
     "Kyle Mathews <mathews.kyle@gmail.com>"
   ],
+  "license": "0BSD",
+  "private": true,
+  "homepage": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components/#readme",
+  "bugs": {
+    "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components/issues"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "latest",
@@ -18,7 +38,6 @@
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-filesystem": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
-    "polished": "^4.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -48,25 +67,6 @@
     "redux",
     "styled-components"
   ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "clean": "gatsby clean",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "serve": "gatsby serve",
-    "start": "npm run develop",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components"
-  },
-  "bugs": {
-    "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components/issues"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
