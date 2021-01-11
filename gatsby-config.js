@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Redux Styled Components Starter',
     description:
-      'A simple Gatsby starter with Redux, Redux Thunk middleware and styled-components that you can deploy to AWS or Netlify. This starter also includes some basic Prettier and VS Code configuration files and uses Airbnb’s ESLint config.',
+      'A Gatsby starter based on Gatsby’s default starter with Redux, Redux Thunk middleware, and styled-components that you can deploy to AWS or Netlify. This starter also includes some basic Prettier and VS Code configuration files and uses Airbnb’s ESLint config.',
     author: '@gatsbyjs',
   },
   plugins: [

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-redux-styled-components",
   "version": "0.0.1",
-  "description": "A simple Gatsby starter with Redux hooks/thunk and styled-components",
+  "description": "A Gatsby starter based on Gatsby’s default starter with Redux, Redux Thunk middleware, and styled-components that you can deploy to AWS or Netlify",
   "repository": {
     "type": "git",
     "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components.git"
