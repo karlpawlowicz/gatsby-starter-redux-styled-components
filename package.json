@@ -6,11 +6,6 @@
     "type": "git",
     "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components.git"
   },
-  "keywords": [
-    "gatsby",
-    "redux",
-    "styled-components"
-  ],
   "author": "Karl Pawlowicz <karlpawlowicz@gmail.com> (https://karl.dev/)",
   "contributors": [
     "Kyle Mathews <mathews.kyle@gmail.com>"
