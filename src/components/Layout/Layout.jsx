@@ -6,9 +6,9 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
+import PropTypes from 'prop-types';
 
 import theme from '../../style/theme';
 import GlobalStyle from '../../style/GlobalStyle';
@@ -29,12 +29,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
       <Container>
         <main>{children}</main>
         <Footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
+          © {new Date().getFullYear()}, Built with{' '}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </Footer>
       </Container>

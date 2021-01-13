@@ -16,74 +16,74 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
             author
+            description
+            title
           }
         }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:creator',
+          content: site.siteMetadata?.author || '',
+        },
+        {
+          name: 'twitter:title',
           content: title,
         },
         {
-          property: `og:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          property: 'og:description',
           content: metaDescription,
+        },
+        {
+          property: 'og:type',
+          content: 'website',
         },
       ].concat(meta)}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
     />
   );
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+};
+
+SEO.defaultProps = {
+  description: '',
+  lang: 'en',
+  meta: [],
 };
 
 export default SEO;
