@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { toggleDarkMode } from '../../store/actions/header.actions';
 import { Container, Wrapper } from './HeaderStyle';

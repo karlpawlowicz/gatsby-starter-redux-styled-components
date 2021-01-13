@@ -6,7 +6,12 @@
     "type": "git",
     "url": "https://github.com/karlpawlowicz/gatsby-starter-redux-styled-components.git"
   },
-  "author": "Karl Pawlowicz <karlpawlowicz@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "redux",
+    "styled-components"
+  ],
+  "author": "Karl Pawlowicz <karlpawlowicz@gmail.com> (https://karl.dev/)",
   "contributors": [
     "Kyle Mathews <mathews.kyle@gmail.com>"
   ],
@@ -62,11 +67,6 @@
     "lint-staged": "^10.5.3",
     "prettier": "2.2.1"
   },
-  "keywords": [
-    "gatsby",
-    "redux",
-    "styled-components"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
