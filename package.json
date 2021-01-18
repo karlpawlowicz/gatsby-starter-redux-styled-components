@@ -20,7 +20,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{css,js,json,jsx,md,scss,ts,tsx}\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "serve": "gatsby serve",
